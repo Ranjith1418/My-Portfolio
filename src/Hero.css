@@ -13,6 +13,7 @@
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  animation: fadeInOut 6s infinite; /* Apply the animation */
 }
 
 .cta-button {
@@ -27,4 +28,28 @@
 
 .cta-button:hover {
   background-color: #21a1f1;
+}
+
+p {
+  transition: opacity 3s ease-in-out;
+}
+
+/* Keyframes for fade-in and fade-out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Slight upward motion */
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0); /* Stay visible */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px); /* Slight downward motion */
+  }
 }
